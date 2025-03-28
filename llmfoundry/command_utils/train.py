@@ -552,6 +552,10 @@ def train(cfg: DictConfig) -> Trainer:
         raise e
 
     compile_config = train_cfg.compile_config
+
+    # added by Vishal: view model weights
+    print(model)
+    
     # Build the Trainer
     log.info('Building trainer...')
     trainer = Trainer(
