@@ -52,7 +52,8 @@ classifiers = [
 ]
 
 install_requires = [
-    'mosaicml[libcloud,wandb,oci,gcs,mlflow]>=0.29.0,<0.30',
+    #'mosaicml[libcloud,wandb,oci,gcs,mlflow]>=0.29.0,<0.30',
+    'mosaicml @ git+https://github.com/vishalbakshi/composer.git@lora_fp32',
     'mlflow>=2.14.1,<2.19',
     'accelerate>=0.25,<1.4',  # for HF inference `device_map`
     'transformers>=v4.49.0,<4.50',
@@ -110,7 +111,8 @@ extra_deps['gpu-flash2'] = [
 extra_deps['gpu'] = copy.deepcopy(extra_deps['gpu-flash2'])
 
 extra_deps['peft'] = [
-    'mosaicml[peft]>=0.29.0,<0.30',
+    #'mosaicml[peft]>=0.29.0,<0.30',
+    'peft @ git+https://github.com/vishalbakshi/peft.git@lora_fp32',
 ]
 
 extra_deps['openai'] = [
