@@ -40,11 +40,6 @@ tokenizer:
   kwargs:
     model_max_length: ${variables.max_seq_len}
 
-# Logging
-progress_bar: true
-log_to_console: true
-console_log_interval: 10ba
-
 # loggers:
 #   aim:
 #     repo: '.aim' # Local directory to save the Aim repo
@@ -127,7 +122,7 @@ fsdp_config:
 # Logging
 progress_bar: true
 log_to_console: true
-console_log_interval: 1ba
+console_log_interval: 10ba
 
 callbacks:
   speed_monitor:
